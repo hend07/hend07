@@ -1,9 +1,4 @@
-- 👋 Hi, I’m @hend07
-- 👀 I’m interested in full stack developer
-- 🌱 I’m currently learning Javascript and CSS
+# 👋 Hi, I’m Hind (@hend07)
 
-
-<!---
-hend07/hend07 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+🎓 PhD Candidate in **Information Technology** and Researcher in **Cybersecurity and Physical System Security**  
+🔐 Interested in **hardware-rooted trust, blockchain security, and intelligent cyber-physical defense**  
