@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hind Al-Ghuraybi | Cybersecurity Portfolio</title>
+    <!-- Google Fonts: Plus Jakarta Sans, Tajawal, & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sansEn: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sansAr: ['Tajawal', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#060913',
+                            card: '#0D1527',
+                            accent: '#10B981', /* Emerald */
+                            accentHover: '#059669',
+                            textMuted: '#94A3B8',
+                            border: '#1E293B',
+                            primary: '#3B82F6' /* Blue */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060913;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10B981;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            width: 2px;
+            background: #1E293B;
+        }
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        .timeline-line-ar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 15px;
+            width: 2px;
+            background: #1E293B;
+        }
+        @media (min-width: 768px) {
+            .timeline-line-ar::before {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-cyber-bg text-gray-100 min-h-screen selection:bg-cyber-accent selection:text-cyber-bg overflow-x-hidden">
+
+    <!-- LANGUAGE TOGGLE FIXED BAR -->
+    <div id="lang-toggle-wrapper" class="fixed top-4 right-4 z-50 transition-all duration-300">
+        <button onclick="toggleLanguage()" title="Switch Language" class="w-11 h-11 rounded-lg bg-cyber-accent text-cyber-bg font-extrabold shadow-lg shadow-cyber-accent/20 hover:bg-cyber-accentHover transition-all flex items-center justify-center border border-cyber-accent/30">
+            <i class="fa-solid fa-language text-xl"></i>
+        </button>
+    </div>
+
+    <!-- ======================================================= -->
+    <!--                   ENGLISH PORTFOLIO                      -->
+    <!-- ======================================================= -->
+    <div id="portfolio-en" class="font-sansEn transition-opacity duration-300">
+        
+        <!-- Header / Nav -->
+        <header class="fixed top-0 left-0 w-full bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-border z-40">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 flex items-center justify-center text-cyber-accent font-mono font-bold text-xl">
+                        H
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg tracking-wide">Hind Al-Ghuraybi</h1>
+                        <p class="text-xs text-cyber-accent font-mono">Cybersecurity Specialist & Researcher</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium mr-20">
+                    <a href="#about" class="hover:text-cyber-accent transition-colors">About</a>
+                    <a href="#services" class="hover:text-cyber-accent transition-colors">Services</a>
+                    <a href="#experience" class="hover:text-cyber-accent transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-cyber-accent transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-cyber-accent transition-colors">Skills</a>
+                    <a href="#credentials" class="hover:text-cyber-accent transition-colors">Certifications</a>
+                    <a href="#contact" class="px-4 h-10 rounded-lg bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent hover:bg-cyber-accent hover:text-cyber-bg flex items-center justify-center transition-all">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-[85vh] relative overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-accent/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-primary/5 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent text-xs font-mono mb-6">
+                    <span class="w-2 h-2 rounded-full bg-cyber-accent animate-pulse"></span>
+                    Available 
+                </div>
+                
+                <h2 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6">
+                    Hind <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-accent to-cyber-primary">Al-Ghuraybi</span>
+                </h2>
+                <p class="text-lg md:text-xl text-cyber-textMuted mb-10 leading-relaxed max-w-3xl">
+                   Cybersecurity Architect & Applied Researcher specializing in Secure-by-Design, Technical GRC, and Zero-Trust Architectures (ZTA) for critical infrastructure. 
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-6 h-12 bg-cyber-accent text-cyber-bg font-bold rounded-lg hover:bg-cyber-accentHover shadow-lg shadow-cyber-accent/20 transition-all flex items-center justify-center">
+                        Explore Projects Portfolio
+                    </a>
+                    <a href="#experience" class="px-6 h-12 bg-cyber-card border border-cyber-border text-gray-300 font-medium rounded-lg hover:border-cyber-accent transition-all flex items-center justify-center">
+                        View Professional Experience
+                    </a>
+                </div>
+            </div>
+
+            <!-- Professional Credentials & MHRSD Freelance License -->
+            <div class="mt-12 bg-gradient-to-r from-cyber-card to-cyber-bg border border-cyber-border p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 hover:border-cyber-accent/30 transition-all">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-accent/10 border border-cyber-accent/20 flex items-center justify-center text-cyber-accent text-2xl">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">MHRSD Ministry of Human Resources Freelance License</h4>
+                        <p class="text-sm text-cyber-textMuted mt-1">Officially licensed practitioner in Information Systems, Technical Writing, Linguistic Editing, and Graphic Design.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 justify-center md:justify-end">
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-mono text-cyber-accent font-bold"><i class="fa-solid fa-circle-check mr-1.5"></i>Information Systems Consultancy</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-mono text-cyber-accent font-bold"><i class="fa-solid fa-circle-check mr-1.5"></i>Linguistic Editing (Texts & Media)</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-mono text-cyber-accent font-bold"><i class="fa-solid fa-circle-check mr-1.5"></i>Technical Copywriting</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-mono text-cyber-accent font-bold"><i class="fa-solid fa-circle-check mr-1.5"></i>Executive Report Design</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles & Domains Grid -->
+        <section id="about" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                Domains of Expertise
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Cybersecurity Engineering -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-primary/10 text-cyber-primary border border-cyber-primary/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Cybersecurity Engineering</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                        Designing and deploying advanced Intrusion Detection and Prevention Systems (IDS/IPS), performing high-fidelity network traffic analysis, and orchestrating cyber-attack simulations to validate operational defense readiness.
+                    </p>
+                </div>
+
+                <!-- Card 2: Security Architecture -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-accent/10 text-cyber-accent border border-cyber-accent/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Security Architecture</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                        An expert in innovating intelligent security architectures to protect modern network infrastructures and IoT technologies, leveraging advanced cryptography, physical security, and AI to enhance the resilience and trustworthiness of critical systems. 
+                    </p>
+                </div>
+
+                <!-- Card 3: GRC & Consulting -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-paste"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Governance, Risk & Compliance (GRC)</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                        Conducting strategic audits of technical RFPs, and governing data security and privacy frameworks to ensure seamless alignment with stringent national and international regulatory compliance mandates.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered Section -->
+        <section id="services" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/20">
+            <div class="flex flex-col md:flex-row items-start justify-between mb-12 gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                        Consulting Services Offered
+                    </h3>
+                    
+                </div>
+                <a href="#contact" class="px-6 py-3 rounded-lg bg-cyber-accent text-cyber-bg font-extrabold hover:bg-cyber-accentHover transition-all flex items-center gap-2 shadow-lg shadow-cyber-accent/10">
+                    <i class="fa-solid fa-paper-plane"></i> Hire as Consultant
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-cyber-accent/5 rounded-full blur-xl group-hover:bg-cyber-accent/10 transition-all"></div>
+                    <span class="text-xs font-mono text-cyber-accent bg-cyber-accent/10 border border-cyber-accent/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Compliance & GRC</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">Compliance Audit & Data Governance</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                        Auditing and evaluating systems, networks, and data layouts against national and international regulatory frameworks and data privacy standards. Designing robust data governance frameworks that ensure the integrity, confidentiality, and quality of sensitive organizational data during digital transformations.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-right text-cyber-accent mr-1.5"></i> RFP & Technical Proposal Compliance Mapping</li>
+                        <li><i class="fa-solid fa-chevron-right text-cyber-accent mr-1.5"></i> Regulatory Data Integrity & Privacy Auditing</li>
+                        <li><i class="fa-solid fa-chevron-right text-cyber-accent mr-1.5"></i> Organizational Compliance Alignment (NCA, NIST)</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-cyber-primary/5 rounded-full blur-xl group-hover:bg-cyber-primary/10 transition-all"></div>
+                    <span class="text-xs font-mono text-cyber-primary bg-cyber-primary/10 border border-cyber-primary/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Secure Architecture</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">Secure Architecture Design</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                        Designing advanced, secure-by-design, threat-resistant network infrastructures to defeat sophisticated cyber-attacks at full operational scale, while securing enterprise IoT and critical digital ecosystems through decentralized models and intelligent Zero-Trust frameworks to safeguard organizational assets.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-right text-cyber-primary mr-1.5"></i> Programmable & Secure Software Networks</li>
+                        <li><i class="fa-solid fa-chevron-right text-cyber-primary mr-1.5"></i> Advanced IoT & Device Security</li>
+                        <li><i class="fa-solid fa-chevron-right text-cyber-primary mr-1.5"></i> Zero-Trust Architecture (ZTA) Frameworks</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-all"></div>
+                    <span class="text-xs font-mono text-purple-400 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Content Governance</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">Technical Writing & Awareness</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                        Authoring regulatory cybersecurity frameworks, translating complex technical literature with zero terminology drift, and drafting elite cybersecurity awareness publications.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-right text-purple-400 mr-1.5"></i> Terminology Localization (NIST/ISO)</li>
+                        <li><i class="fa-solid fa-chevron-right text-purple-400 mr-1.5"></i> Awareness Campaign Design</li>
+                        <li><i class="fa-solid fa-chevron-right text-purple-400 mr-1.5"></i> Executive Report Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/50">
+            <h3 class="text-2xl md:text-3xl font-bold mb-16 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                Professional Experience
+            </h3>
+
+            <div class="relative timeline-line">
+                <!-- Experience Item 1 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-accent flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-accent rounded-full animate-ping"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent font-mono text-xs font-bold mb-2">Apr 2025 - Present</span>
+                        <h4 class="text-xl font-bold text-white">Independent Cybersecurity Consultant & Auditor</h4>
+                        <p class="text-sm text-cyber-accent font-mono mt-1">Technical Audit & Governance</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-accent text-sm font-semibold mb-3"><i class="fa-solid fa-circle-check mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Audited and inspected consulting project proposals and administrative files to ensure absolute alignment with technical standards and regulatory compliance.</li>
+                                <li>Executed specialized audits targeting sensitive data protection, verifying integrity controls, and data privacy compliance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2a (Project Manager) -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-primary flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-primary rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-primary/10 border border-cyber-primary/20 text-cyber-primary font-mono text-xs font-bold mb-2">Jan 2025 - Present</span>
+                        <h4 class="text-xl font-bold text-white">Project Manager for Recruitment Exhibitions Research</h4>
+                        <p class="text-sm text-cyber-primary font-mono mt-1">Seettech</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-primary text-sm font-semibold mb-3"><i class="fa-solid fa-clipboard-list mr-2"></i>Key Operations</h5>
+                            <p class="text-sm text-cyber-textMuted leading-relaxed">
+                                Leading and coordinating comprehensive research projects and strategic development operations for recruitment exhibitions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2b -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-primary flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-primary rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-primary/10 border border-cyber-primary/20 text-cyber-primary font-mono text-xs font-bold mb-2">Mar 2024 - Present</span>
+                        <h4 class="text-xl font-bold text-white">Technical Content Strategist</h4>
+                        <p class="text-sm text-cyber-primary font-mono mt-1">Seettech</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-primary text-sm font-semibold mb-3"><i class="fa-solid fa-file-invoice mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Authoring promotional and marketing technical content, coordinating organizational communications, and translating high-level tech concepts into official documentation.</li>
+                                <li>Directing content governance for the national Taahab Employment Exhibition (3 cycles) and the WiDS KSA Forum (2 consecutive years).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-purple-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-purple-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 font-mono text-xs font-bold mb-2">Jun 2021 - Dec 2025</span>
+                        <h4 class="text-xl font-bold text-white">Content Governance Lead</h4>
+                        <p class="text-sm text-purple-400 font-mono mt-1">Attaa Digital</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-purple-400 text-sm font-semibold mb-3"><i class="fa-solid fa-bullhorn mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Governed and edited over <strong class="text-gray-200">1,800 technical publications and posts</strong> in cybersecurity, AI, and IoT, ensuring compliance with NIST and ISO frameworks.</li>
+                                <li>Conceptualized and designed 20+ national tech awareness campaigns, generating over 13 million views.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-yellow-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 font-mono text-xs font-bold mb-2">Jul 2023 - Aug 2024</span>
+                        <h4 class="text-xl font-bold text-white">Technical Writing Specialist</h4>
+                        <p class="text-sm text-yellow-500 font-mono mt-1">Bayan Academy</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-yellow-500 text-sm font-semibold mb-3"><i class="fa-solid fa-file-pdf mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Built 50-task multi-channel roadmap; rescued postponed campaigns, securing more than 60 enrollments.</li>
+                                <li>Co-developed IoT Certification Guide v2 with 100% terminology audit; executed 10 emerging-tech campaigns that lifted LinkedIn interaction 76% and X reach 27%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 5 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-teal-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-teal-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-teal-500/10 border border-teal-500/20 text-teal-400 font-mono text-xs font-bold mb-2">Sep 2024 - Dec 2024</span>
+                        <h4 class="text-xl font-bold text-white">Cybersecurity Localization & Compliance Specialist</h4>
+                        <p class="text-sm text-teal-400 font-mono mt-1">Cyberx World</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-teal-400 text-sm font-semibold mb-3"><i class="fa-solid fa-language mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Localized 30+ enterprise-grade cybersecurity assets, maintaining terminology consistency with SAMA, ISO 27001, and NIST frameworks.</li>
+                                <li>Developed 5 specialized training modules, reducing onboarding intervals by 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 6 -->
+                <div class="mb-4 md:flex justify-between items-start w-full relative">
+                    <div class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-accent flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-accent rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pl-10 md:pl-0 md:text-right pr-0 md:pr-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent font-mono text-xs font-bold mb-2">Mar 2023 - Jun 2023</span>
+                        <h4 class="text-xl font-bold text-white">Cybersecurity Cooperative Trainee</h4>
+                        <p class="text-sm text-cyber-accent font-mono mt-1">Taif University</p>
+                    </div>
+                    <div class="md:w-[45%] pl-10 md:pl-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-accent text-sm font-semibold mb-3"><i class="fa-solid fa-user-shield mr-2"></i>Key Accomplishments</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pl-4">
+                                <li>Executed hands-on defensive & offensive security labs; simulated MitM, DNS Poisoning, and Trojan-based system exploits using Metasploit.</li>
+                                <li>Designed and validated robust mitigation architectures including firewall hardening, 2FA enforcement, and endpoint hardening to protect compromised network nodes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Portfolio Section -->
+        <section id="projects" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                         Projects
+                    </h3>
+                    
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 text-xs md:text-sm">
+                    <button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-lg bg-cyber-accent text-cyber-bg font-bold transition-all">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('engineering')" id="btn-engineering" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        Engineering
+                    </button>
+                    <button onclick="filterProjects('architecture')" id="btn-architecture" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        Architecture
+                    </button>
+                    <button onclick="filterProjects('grc')" id="btn-grc" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        GRC & Advisory
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                
+                <!-- Project 1 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">Applied IDPS</span>
+                            <i class="fa-solid fa-circle-nodes text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Network Defense & Intrusion Prevention</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Integrated Suricata IDPS on Ubuntu 20.04 to monitor network flows, write custom rules to block command injection, and visualize alerts via ntopng dashboards.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Dropped 77.6K DDoS Packets</span>
+                        <button onclick="openModal('modal-suricata')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">Offensive Security</span>
+                            <i class="fa-solid fa-bug text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Vulnerability Exploitation & Mitigation</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Simulated real-world system compromise using Metasploit (Reverse TCP on LPORT 4782) on Windows 7, along with TCP session hijacking and Python packet injection.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Reverse Shell & Scapy Crafting</span>
+                        <button onclick="openModal('modal-exploit')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">Cryptographic Dev</span>
+                            <i class="fa-solid fa-lock text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Mathematical RSA TCP Chat From Scratch</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Developed a multi-threaded Python chat application implementing end-to-end RSA encryption directly using the Extended Euclidean Algorithm for modular inverse.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Pure Python Cryptography</span>
+                        <button onclick="openModal('modal-rsa')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Architecture) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">SDN Architecture</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/p4ddle" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-server text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">P4DDLe: Live Programmable SDN Defense</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Engineered a line-rate DDoS filtering model using P4 programmable data planes (Counting Bloom Filters) and LUCID CNN for real-time deep learning detection.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">P4 & Dual-Block Register Design</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/p4ddle" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> Code</a>
+                            <button onclick="openModal('modal-p4')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Architecture) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">Published Research Q2</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/AMCB-Authenticated-Medical-Cyber-Physical-Blockchain-model" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-microchip text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">AMCB: Authenticated IoMT Medical Blockchain</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Designed a multi-layered hardware security (SRAM PUF) and blockchain trust framework published in a Q2 journal to secure medical cyber-physical ecosystems.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Response Speed of 49.82ms</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/AMCB-Authenticated-Medical-Cyber-Physical-Blockchain-model" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> Code</a>
+                            <button onclick="openModal('modal-amcb')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Systematic GRC Review</span>
+                            <i class="fa-solid fa-file-shield text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Systematic GRC & Feasibility Evaluation of Healthcare Blockchain</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Analyzed 10 decentralized medical architectures for peak-demand performance barriers, transaction (gas) costs, and real-time integration compatibility.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Real-Time Peak & Cost Audit</span>
+                        <button onclick="openModal('modal-grc-ehr')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 7 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">IoT Security Review</span>
+                            <i class="fa-solid fa-video-slash text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Systematic Security Review of IP Cameras</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Conducted a systematic review of smart IP camera vulnerabilities and firmware security risks based on OWASP IoT Top 10, evaluating mitigation controls.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">OWASP IoT Review & GRC</span>
+                        <button onclick="openModal('modal-ip-cam')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 8 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Software Governance</span>
+                            <i class="fa-solid fa-diagram-project text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">AI-Driven Agile Risk &amp; Defect Governance</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Conducted a systematic review of artificial intelligence methodologies (Fuzzy Logic, ANN) used for early software defect prediction and risk management in Agile SDLCs.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Defect Prediction & Resource Optimization</span>
+                        <button onclick="openModal('modal-agile')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            Details <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 10 (GRC / Security Frameworks) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Security Framework</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/CPS-SEC" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-file-invoice text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">CPS-SEC: Security Maturity Assessment Framework</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Developed a multi-dimensional security evaluation framework for Cyber-Physical Systems (CPS) with 16 criteria, validated through sensitive multi-scenario mathematical auditing.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">16 Multi-Scenario GRC Metrics</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/CPS-SEC" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> Code</a>
+                            <button onclick="openModal('modal-cps-sec')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 (Engineering / ML Network Security) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">Machine Learning</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/CRPS-ES-ML-Methodology-to-Detect-DDoS-in-5G" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-gears text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">CRPS-ES-ML Anomaly Detection in 5G Slices</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Constructed a hybrid ML detection model utilizing Continuous Ranked Probability Score (CRPS) and Exponential Smoothing to dynamically identify DDoS flows in 5G slices.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">6.1 Million Records Processed</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/CRPS-ES-ML-Methodology-to-Detect-DDoS-in-5G" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> Code</a>
+                            <button onclick="openModal('modal-5g-ml')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 (Architecture / Mobile Health Security) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">Secure Application</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/SMCA" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-mobile-screen-button text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">SMCA: Smart Medical Code Alert System</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Built a highly responsive prototype for emergency medical code broadcasts using Flutter, integrated securely with Gemini AI for instant administrative alerting.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Alert Trigger Speed &lt; 30s</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/SMCA" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> Code</a>
+                            <button onclick="openModal('modal-smca')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 (Architecture / Cloud RFID Bus) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider font-mono text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">IoT &amp; Cloud</span>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-bus text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Cloud-Enabled School Bus RFID Safety System</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            Designed and prototyped an IoT system for Taif University using NodeMCU, RFID wristbands, and MySQL to monitor student boarding/deboarding, displaying live counts for the driver and syncing logs to a central cloud server.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-mono font-bold">Real-Time Cloud &amp; LCD Tracking</span>
+                        <div class="flex items-center gap-3">
+                            <button onclick="openModal('modal-bus')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Arsenal Section -->
+        <section id="skills" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                Technical Arsenal
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Defensive & Engineering Skills -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-cyber-accent/30 transition-all">
+                    <h4 class="text-lg font-bold text-cyber-accent mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-sm"></i> Languages
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">P4 Language</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Python</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Dart (Flutter)</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Bash / Shell</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">SQL</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">HTML5 & CSS3</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">LaTeX</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-yellow-400/30 transition-all">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-toolbox text-sm"></i> Tools & Technologies
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Suricata IDPS</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Snort</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">ntopng</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Metasploit</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Scapy</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Kali Linux</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Wireshark</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Docker</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Mininet</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">BMv2 Switch</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Adobe InDesign</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Adobe Illustrator</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">iSpring Suite</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Standards -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-purple-400/30 transition-all">
+                    <h4 class="text-lg font-bold text-purple-400 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-file-shield text-sm"></i> Frameworks & Standards
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">NCA ECC</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">NIST CSF</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">ISO 27001</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">GDPR Frameworks</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">HIPAA Compliance</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">FHIR Medical Std</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">OWASP IoT Top 10</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Agile SecDevOps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Credentials Section -->
+        <section id="credentials" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/10">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                Professional Credentials &amp; Certifications
+            </h3>
+            
+            <div class="overflow-x-auto bg-cyber-card border border-cyber-border rounded-xl p-6">
+                <table class="w-full text-left border-collapse text-sm">
+                    <thead>
+                        <tr class="border-b border-cyber-border text-cyber-accent font-mono text-xs uppercase tracking-wider">
+                            <th class="pb-4 pr-4">Certification</th>
+                            <th class="pb-4 px-4">Issuer</th>
+                            <th class="pb-4 px-4">Date</th>
+                            <th class="pb-4 pl-4 text-right">Verification</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-cyber-border/40 text-gray-300">
+                        <tr class="hover:bg-cyber-bg/30 transition-colors">
+                            <td class="py-4 pr-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-cyber-accent"></i> Google Cybersecurity Professional Certificate V2
+                            </td>
+                            <td class="py-4 px-4">Coursera / Google</td>
+                            <td class="py-4 px-4 font-mono">Jan 24, 2024</td>
+                            <td class="py-4 pl-4 text-right">
+                                <a href="https://www.credly.com/go/90Yyo0Pk" target="_blank" class="px-3 py-1 bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent rounded text-xs hover:bg-cyber-accent hover:text-cyber-bg transition-all font-mono font-bold"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Verify</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyber-bg/30 transition-colors">
+                            <td class="py-4 pr-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie text-cyber-accent"></i> Google Data Analytics Professional Certificate
+                            </td>
+                            <td class="py-4 px-4">Coursera / Google</td>
+                            <td class="py-4 px-4 font-mono">Nov 1, 2023</td>
+                            <td class="py-4 pl-4 text-right">
+                                <a href="https://www.credly.com/go/8wocLUSd" target="_blank" class="px-3 py-1 bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent rounded text-xs hover:bg-cyber-accent hover:text-cyber-bg transition-all font-mono font-bold"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Verify</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-cyber-card/50 border-t border-cyber-border py-12 px-6">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold text-lg mb-1 text-cyber-accent">Hind Al-Ghuraybi</h4>
+                    <p class="text-xs text-cyber-textMuted">Professional Cybersecurity Portfolio</p>
+                </div>
+                <div class="flex items-center gap-4 text-xl">
+                    <a href="https://github.com/hend07" target="_blank" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hind-abed-al-ghuraybi-3716b4133" target="_blank" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:hendabed1@hotmail.com" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="text-xs text-cyber-textMuted">
+                    &copy; 2026 Hind Al-Ghuraybi. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ======================================================= -->
+    <!--                   ARABIC PORTFOLIO                      -->
+    <!-- ======================================================= -->
+    <div id="portfolio-ar" class="font-sansAr hidden transition-opacity duration-300" dir="rtl">
+        
+        <!-- Header / Nav -->
+        <header class="fixed top-0 right-0 w-full bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-border z-40">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-cyber-accent/10 border border-cyber-accent/30 flex items-center justify-center text-cyber-accent font-bold text-xl">
+                        هـ
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg tracking-wide">هند الغريبي</h1>
+                        <p class="text-xs text-cyber-accent ">أخصائية وباحثة أمن سيبراني</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium ml-auto pl-20">
+                    <a href="#about-ar" class="hover:text-cyber-accent transition-colors">من أنا</a>
+                    <a href="#services-ar" class="hover:text-cyber-accent transition-colors">الخدمات الاستشارية</a>
+                    <a href="#experience-ar" class="hover:text-cyber-accent transition-colors">الخبرة المهنية</a>
+                    <a href="#projects-ar" class="hover:text-cyber-accent transition-colors"> المشاريع التقنية</a>
+                    <a href="#skills-ar" class="hover:text-cyber-accent transition-colors">المهارات التقنية</a>
+                    <a href="#credentials-ar" class="hover:text-cyber-accent transition-colors">الشهادات المهنية</a>
+                    <a href="#contact-ar" class="px-4 h-10 rounded-lg bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent hover:bg-cyber-accent hover:text-cyber-bg flex items-center justify-center transition-all">تواصل معي</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-[85vh] relative overflow-hidden text-right">
+            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-cyber-accent/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyber-primary/5 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-4xl mr-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent text-xs font-mono mb-6">
+                    <span class="w-2 h-2 rounded-full bg-cyber-accent animate-pulse"></span>
+                    متاحة 
+                </div>
+                
+                <h2 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6">
+                    هـنـد<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-accent to-cyber-primary">الغريبي</span>
+                </h2>
+                <p class="text-lg md:text-xl text-cyber-textMuted mb-10 leading-relaxed max-w-3xl">
+                معمارية أمن سيبراني وباحثة تطبيقية متخصصة في مبادئ الأمن بالتصميم (Secure-by-Design)، والحوكمة والمخاطر والامتثال التقني (Technical GRC)، وأطر الثقة الصفرية (ZTA) للبنى التحتية الحيوية.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects-ar" class="px-6 h-12 bg-cyber-accent text-cyber-bg font-bold rounded-lg hover:bg-cyber-accentHover shadow-lg shadow-cyber-accent/20 transition-all flex items-center justify-center">
+                        تصفح معرض المشاريع 
+                    </a>
+                    <a href="#experience-ar" class="px-6 h-12 bg-cyber-card border border-cyber-border text-gray-300 font-medium rounded-lg hover:border-cyber-accent transition-all flex items-center justify-center">
+                        استعراض الخبرة العملية
+                    </a>
+                </div>
+            </div>
+
+            <!-- Professional Credentials & MHRSD Freelance License -->
+            <div class="mt-12 bg-gradient-to-r from-cyber-card to-cyber-bg border border-cyber-border p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 hover:border-cyber-accent/30 transition-all text-right">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-accent/10 border border-cyber-accent/20 flex items-center justify-center text-cyber-accent text-2xl">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">رخصة العمل الحر المعتمدة من وزارة الموارد البشرية</h4>
+                        <p class="text-sm text-cyber-textMuted mt-1">ممارس مرخص رسمياً في مجالات تقديم الاستشارات في نظم المعلومات، والكتابة التقنية، والتحرير اللغوي، وتصميم التقارير التنفيذية.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 justify-center md:justify-end">
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-bold text-cyber-accent"><i class="fa-solid fa-circle-check ml-1.5"></i> تقديم استشارات في نظم المعلومات</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-bold text-cyber-accent"><i class="fa-solid fa-circle-check ml-1.5"></i> تحرير لغوي وتدقيق علمي</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-bold text-cyber-accent"><i class="fa-solid fa-circle-check ml-1.5"></i> صياغة وكتابة محتوى تقني</span>
+                    <span class="px-3 py-1 bg-cyber-bg border border-cyber-border rounded-full text-xs font-bold text-cyber-accent"><i class="fa-solid fa-circle-check ml-1.5"></i> تصميم التقارير التنفيذية للقيادات</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roles & Domains Grid -->
+        <section id="about-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border text-right">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                مجالات وجوانب الخبرة المهنية
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Cybersecurity Engineering -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-primary/10 text-cyber-primary border border-cyber-primary/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">هندسة الأمن السيبراني</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                       تصميم وإعداد منظومات كشف ومنع التسلل الرقمية، والتحليل المتقدم لحركة مرور بيانات الشبكات، مع إدارة محاكاة الهجمات السيبرانية المعقدة واختبار كفاءة خطوط الدفاع التشغيلية.
+                    </p>
+                </div>
+
+                <!-- Card 2: Security Architecture -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-cyber-accent/10 text-cyber-accent border border-cyber-accent/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">البنية المعمارية للأمن السيبراني</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                      خبير في ابتكار معماريات أمنية ذكية لتأمين البنى التحتية للشبكات الحديثة وتقنيات إنترنت الأشياء (IoT)، باستخدام حلول التشفير المتقدمة، الأمن المادي والذكاء الاصطناعي لتعزيز مرونة وموثوقية الأنظمة الحيوية.
+                    </p>
+                </div>
+
+                <!-- Card 3: GRC & Consulting -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl hover:border-cyber-accent/30 transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-paste"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">الحوكمة والمخاطر والامتثال (GRC)</h4>
+                    <p class="text-cyber-textMuted text-sm leading-relaxed">
+                       التدقيق الاستراتيجي لكراسات الشروط والمواصفات التقنية (RFPs)، وحوكمة ضوابط أمن وبيانات الخصوصية، لضمان الامتثال التام للتشريعات الوطنية والدولية الصارمة
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered Section (AR) -->
+        <section id="services-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/20 text-right">
+            <div class="flex flex-col md:flex-row items-start justify-between mb-12 gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                        الخدمات الاستشارية المستقلة المقدمة
+                    </h3>
+                    
+                </div>
+                <a href="#contact-ar" class="px-6 py-3 rounded-lg bg-cyber-accent text-cyber-bg font-extrabold hover:bg-cyber-accentHover transition-all flex items-center gap-2 shadow-lg shadow-cyber-accent/10">
+                    <i class="fa-solid fa-paper-plane"></i> اطلب الخدمة الاستشارية
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 (AR) -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-24 h-24 bg-cyber-accent/5 rounded-full blur-xl group-hover:bg-cyber-accent/10 transition-all"></div>
+                    <span class="text-xs text-cyber-accent bg-cyber-accent/10 border border-cyber-accent/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">الحوكمة والامتثال GRC</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">تدقيق الامتثال وحوكمة البيانات</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                        تدقيق وتقييم مستويات امتثال الأنظمة والشبكات والبيانات للتشريعات المحلية وضوابط الخصوصية وحماية البيانات الشخصية. حوكمة وإدارة تدفق البيانات وتصميم أطر عمل تضمن موثوقية وسلامة وجودة البيانات الحساسة للمشاريع والتحولات الرقمية.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-left text-cyber-accent ml-1.5"></i> مراجعة وتقييم كراسات الشروط والمواصفات التقنية (RFPs)</li>
+                        <li><i class="fa-solid fa-chevron-left text-cyber-accent ml-1.5"></i> مواءمة البنى الرقمية مع تشريعات كفاءة الإنفاق والامتثال</li>
+                        <li><i class="fa-solid fa-chevron-left text-cyber-accent ml-1.5"></i> تدقيق سلامة وحماية البيانات الحساسة وإدارة الخصوصية</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 (AR) -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-24 h-24 bg-cyber-primary/5 rounded-full blur-xl group-hover:bg-cyber-primary/10 transition-all"></div>
+                    <span class="text-xs text-cyber-primary bg-cyber-primary/10 border border-cyber-primary/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">بنية وتصميم المعماريات</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">هندسة وتصميم المعماريات الآمنة</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                      تصميم بنى تحتية شبكية متطورة، وآمنة منذ التصميم (Secure-by-Design)، ومقاومة للتهديدات لإحباط الهجمات السيبرانية المعقدة بكفاءة تشغيلية كاملة، مع تأمين منظومات إنترنت الأشياء (IoT) للمنشآت والبيئات الرقمية الحيوية عبر نماذج لا مركزية وأطر عمل الثقة الصفرية (Zero-Trust) الذكية لحماية أصول المنظمة.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-left text-cyber-primary ml-1.5"></i> تصميم بنى تحتية آمنة للشبكات البرمجية</li>
+                        <li><i class="fa-solid fa-chevron-left text-cyber-primary ml-1.5"></i> أمن إنترنت الأشياء (IoT) المتقدم وحماية الأجهزة</li>
+                        <li><i class="fa-solid fa-chevron-left text-cyber-primary ml-1.5"></i> تصميم أطر عمل Zero-Trust ذكية</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 (AR) -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-24 h-24 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-all"></div>
+                    <span class="text-xs text-purple-400 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full uppercase tracking-wider font-bold">توطين وحوكمة المحتوى</span>
+                    <h4 class="text-xl font-bold text-white mt-6 mb-3">حوكمة وصياغة المحتوى التقني</h4>
+                    <p class="text-sm text-cyber-textMuted leading-relaxed mb-4">
+                        توطين الأصول والسياسات السيبرانية مع ضمان المطابقة التامة للمعايير (NIST, ISO)، صياغة ونشر حقائب تدريبية متخصصة، وهيكلة وصياغة تقارير حوكمة تنفيذية رفيعة المستوى لمجالس الإدارة.
+                    </p>
+                    <ul class="space-y-2 text-xs text-cyber-textMuted font-mono">
+                        <li><i class="fa-solid fa-chevron-left text-purple-400 ml-1.5"></i> توطين المصطلحات والأطر (NIST / ISO)</li>
+                        <li><i class="fa-solid fa-chevron-left text-purple-400 ml-1.5"></i> تصميم وبناء حملات التوعية الأمنية المبتكرة</li>
+                        <li><i class="fa-solid fa-chevron-left text-purple-400 ml-1.5"></i> تصميم وصياغة التقارير التنفيذية الاستراتيجية</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section (AR) -->
+        <section id="experience-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/50 text-right">
+            <h3 class="text-2xl md:text-3xl font-bold mb-16 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                الخبرة العملية وسوق العمل
+            </h3>
+
+            <div class="relative timeline-line-ar">
+                <!-- Experience Item 1 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-accent flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-accent rounded-full animate-ping"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent text-xs font-bold mb-2">أبريل 2025 - الحالي</span>
+                        <h4 class="text-xl font-bold text-white">مستشار ومدقق أمن سيبراني مستقل</h4>
+                        <p class="text-sm text-cyber-accent mt-1">تدقيق الامتثال الفني والحوكمة</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-accent text-sm font-semibold mb-3"><i class="fa-solid fa-circle-check ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>تدقيق وفحص مقترحات المشاريع والملفات الاستشارية للتأكد من مواءمتها التامة للمعايير والامتثال التقني.</li>
+                                <li>تنفيذ تدقيق متخصص في حماية البيانات الحساسة وضمان سلامتها وجودتها.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2a (Project Manager) -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-primary flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-primary rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-primary/10 border border-cyber-primary/20 text-cyber-primary text-xs font-bold mb-2">يناير 2025 - الحالي</span>
+                        <h4 class="text-xl font-bold text-white">مدير مشروع لبحث معارض التوظيف</h4>
+                        <p class="text-sm text-cyber-primary mt-1">صيتك (Seettech)</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-primary text-sm font-semibold mb-3"><i class="fa-solid fa-clipboard-list ml-2"></i>إدارة وتوجيه المشروعات</h5>
+                            <p class="text-sm text-cyber-textMuted leading-relaxed">
+                                إشراف وتوجيه كامل لإجراء أبحاث معارض التوظيف المتقدمة والمشروعات المرتبطة بها.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2b -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-primary flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-primary rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-primary/10 border border-cyber-primary/20 text-cyber-primary text-xs font-bold mb-2">مارس 2024 - الحالي</span>
+                        <h4 class="text-xl font-bold text-white">أخصائي استراتيجيات المحتوى التقني</h4>
+                        <p class="text-sm text-cyber-primary mt-1">صيتك (Seettech)</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-primary text-sm font-semibold mb-3"><i class="fa-solid fa-file-invoice ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>بناء وكتابة المحتويات الترويجية والتسويقية التقنية والمراسلات التنظيمية، وتحويل الأهداف التقنية رفيعة المستوى لمنتجات ووثائق رسمية.</li>
+                                <li>إدارة وتوجيه حوكمة المحتوى لمعرض توظيف تعاهد (3 دورات متتالية) وملتقى WiDS KSA لدورتين متتاليتين.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-purple-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-purple-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold mb-2">يونيو 2021 - ديسمبر 2025</span>
+                        <h4 class="text-xl font-bold text-white">قائد حوكمة المحتوى الرقمي</h4>
+                        <p class="text-sm text-purple-400 mt-1">مبادرة العطاء الرقمي</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-purple-400 text-sm font-semibold mb-3"><i class="fa-solid fa-bullhorn ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>حوكمة وتدقيق أكثر من <strong class="text-gray-200">1,800 منشور أمني وتقني</strong> في مجالات الأمن السيبراني والذكاء الاصطناعي وإنترنت الأشياء لضمان مواءمتها التامة لأطر NIST و ISO.</li>
+                                <li>صياغة وبناء 20+ حملة وطنية للتوعية حققت أكثر من 13 مليون مشاهدة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-yellow-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-xs font-bold mb-2">يوليو 2023 - أغسطس 2024</span>
+                        <h4 class="text-xl font-bold text-white">أخصائي كتابة وتصميم تقني</h4>
+                        <p class="text-sm text-yellow-500 mt-1">أكاديمية بيان (Bayan Academy)</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-yellow-500 text-sm font-semibold mb-3"><i class="fa-solid fa-file-pdf ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>بناء خارطة طريق متعددة القنوات تحتوي على 50 مهمة؛ وإنقاذ الحملات المؤجلة وتأمين أكثر من 60 تسجيلاً في البرامج.</li>
+                                <li>المشاركة في تطوير "دليل شهادات إنترنت الأشياء (IoT Guide v2)" وتدقيق مصطلحاته العلمية بنسبة 100%؛ وإطلاق 10 حملات للتقنيات الناشئة رفعت تفاعل لينكدإن بنسبة 76% والوصول على منصة X بنسبة 27%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 5 -->
+                <div class="mb-16 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-teal-500 flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-teal-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold mb-2">سبتمبر 2024 - ديسمبر 2024</span>
+                        <h4 class="text-xl font-bold text-white">أخصائي توطين المحتوى والامتثال السيبراني</h4>
+                        <p class="text-sm text-teal-400 mt-1">سايبر إكس (Cyberx World)</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-teal-400 text-sm font-semibold mb-3"><i class="fa-solid fa-language ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>تعريب وتوطين أكثر من 30 أصلاً ومستنداً سيبرانياً للمنشآت والمؤسسات بمطابقة تامة لمعايير SAMA و ISO 27001 و NIST.</li>
+                                <li>تطوير وصياغة 5 حقائب تدريبية تفاعلية أدت لتقليص وقت تدريب الموظفين والمهنيين بنسبة 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 6 -->
+                <div class="mb-4 md:flex justify-between items-start w-full relative">
+                    <div class="absolute right-0 md:right-1/2 md:transform md:translate-x-1/2 w-8 h-8 rounded-full bg-cyber-bg border-4 border-cyber-accent flex items-center justify-center z-10">
+                        <div class="w-2.5 h-2.5 bg-cyber-accent rounded-full"></div>
+                    </div>
+                    
+                    <div class="md:w-[45%] pr-10 md:pr-0 md:text-left pl-0 md:pl-12 order-1 md:order-2 mb-4 md:mb-0">
+                        <span class="inline-block px-3 py-1 rounded bg-cyber-accent/10 border border-cyber-accent/20 text-cyber-accent text-xs font-bold mb-2">مارس 2023 - يونيو 2023</span>
+                        <h4 class="text-xl font-bold text-white">متدرب أمن سيبراني ميداني</h4>
+                        <p class="text-sm text-cyber-accent mt-1">جامعة الطائف</p>
+                    </div>
+                    <div class="md:w-[45%] pr-10 md:pr-8 order-2 md:order-1">
+                        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl hover:border-cyber-border/80 transition-all">
+                            <h5 class="text-cyber-accent text-sm font-semibold mb-3"><i class="fa-solid fa-user-shield ml-2"></i>أهم المنجزات والمهام</h5>
+                            <ul class="space-y-3 text-sm text-cyber-textMuted list-disc pr-4">
+                                <li>تطبيق تجارب دفاعية وهجومية مخبرية متطورة تشمل محاكاة هجمات حجب الخدمة، حقن حزم الشبكة وتسميم DNS عبر Metasploit و Scapy.</li>
+                                <li>تصميم وصياغة توصيات حماية الأنظمة وتأمين المنافذ النشطة وتفعيل المصادقة الثنائية (MFA) وتصليب الجدران النارية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Portfolio Section -->
+        <section id="projects-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border text-right">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-2 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                         المشاريع التقنية
+                    </h3>
+                    
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 text-xs md:text-sm">
+                    <button onclick="filterProjects('all')" id="btn-all-ar" class="filter-btn px-4 py-2 rounded-lg bg-cyber-accent text-cyber-bg font-bold transition-all">
+                        الكل
+                    </button>
+                    <button onclick="filterProjects('engineering')" id="btn-engineering-ar" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        هندسة الأمن
+                    </button>
+                    <button onclick="filterProjects('architecture')" id="btn-architecture-ar" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        المعمارية الأمنية
+                    </button>
+                    <button onclick="filterProjects('grc')" id="btn-grc-ar" class="filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300">
+                        الحوكمة والالتزام GRC
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid-ar">
+                
+                <!-- Project 1 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">مشروع تطبيقي</span>
+                            <i class="fa-solid fa-circle-nodes text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">تصميم وتثبيت أنظمة كشف ومنع التسلل</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            إعداد متكامل لنظام Suricata IDPS على أوبونتو، ومراقبة حركة البيانات التفاعلية عبر ntopng ومحاكاة هجمات حجب الخدمة والويب وتسميم ARP.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">إسقاط 77.6K حزمة DDoS</span>
+                        <button onclick="openModal('modal-suricata')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">اختبار اختراق عملي</span>
+                            <i class="fa-solid fa-bug text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">محاكاة الاختراق وتقييم مرونة دفاعات الأنظمة</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            استغلال ثغرات نظام Windows 7 وبناء جلسة اتصال عكسي Meterpreter على بورت 4782، مع تنفيذ هجمات اختطاف الجلسات وقطع الاتصال وحقن حزم Scapy.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">الاتصال العكسي وهندسة حزم البيانات</span>
+                        <button onclick="openModal('modal-exploit')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Engineering) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">تطوير برمجي مشفر</span>
+                            <i class="fa-solid fa-lock text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">خادم محادثة مشفر رياضيًا بالكامل (RSA)</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            تطوير تطبيق محادثة متعدد الخيوط بلغة Python، يتضمن برمجة خوارزمية RSA للتشفير غير المتماثل رياضياً من الصفر دون أي مكتبات تشفير جاهزة.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">تشفير رياضي من الصفر</span>
+                        <button onclick="openModal('modal-rsa')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Architecture) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">معمارية SDN مبتكرة</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/p4ddle" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-server text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">معمارية P4DDLe لكشف هجمات DDoS الحية</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            دمج تصفية الحزم السريعة بلغة P4 عبر Counting Bloom Filter مع نموذج التعلم العميق LUCID CNN للكشف اللحظي والحد من تصادم البيانات ذكياً.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">برمجة الشبكات (P4) وتصميم مسجلات الكتلة المزدوجة</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/p4ddle" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> الكود</a>
+                            <button onclick="openModal('modal-p4')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Architecture) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">بحث منشور Q2</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/AMCB-Authenticated-Medical-Cyber-Physical-Blockchain-model" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-microchip text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">معمارية AMCB لحماية أجهزة IoMT الطبية</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            تصميم نموذج متكامل يربط سلسلة الكتل والبصمة الفيزيائية SRAM PUF والتعلم الآلي بالشبكات الضبابية لحماية بيانات المرضى الفورية.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">سرعة استجابة 49.82ms</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/AMCB-Authenticated-Medical-Cyber-Physical-Blockchain-model" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> الكود</a>
+                            <button onclick="openModal('modal-amcb')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-purple-400 bg-purple-400/10 px-2 py-1 rounded">دراسة وتقييم أمني</span>
+                            <i class="fa-solid fa-file-shield text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">تقييم استشاري منهجي لنماذج بلوكشين الرعاية</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                           تحليل 10 معماريات طبية لامركزية لتقييم عقبات الأداء في أوقات الذروة، وتكاليف العمليات (رسوم الـ Gas)، ومدى التوافق للتكامل في الوقت الفعلي.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">تدقيق تشغيلي في الوقت الفعلي</span>
+                        <button onclick="openModal('modal-grc-ehr')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 7 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-purple-400 bg-purple-400/10 px-2 py-1 rounded">مراجعة أمنية لثغرات IoT</span>
+                            <i class="fa-solid fa-video-slash text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">مراجعة أمنية وتقييم مخاطر كاميرات المراقبة IP</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            دراسة مسحية ومراجعة لمخاطر كاميرات المراقبة استناداً إلى OWASP، وتقييم أطر الضوابط الأمنية المقترحة كالتعمية وتحديث الـ Firmware.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">تقييم مخاطر إنترنت الأشياء (OWASP IoT) والحوكمة والامتثال</span>
+                        <button onclick="openModal('modal-ip-cam')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 8 (GRC) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-purple-400 bg-purple-400/10 px-2 py-1 rounded">حوكمة التطوير الرشيق</span>
+                            <i class="fa-solid fa-diagram-project text-cyber-textMuted"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">مراجعة منهجية لحوكمة عيوب ومخاطر برمجيات Agile بالذكاء الاصطناعي</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            دراسة مسحية وتقييم نقدي لمنهجيات الذكاء الاصطناعي (كالمنطق الضبابي والشبكات العصبية) للتنبؤ الاستباقي بالعيوب وإدارة المخاطر في دورات حياة برمجيات أجايل.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">توقع الأخطاء وحوكمة الموارد</span>
+                        <button onclick="openModal('modal-agile')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                            التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 10 (GRC / Security Frameworks AR) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="grc">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-purple-400 bg-purple-400/10 px-2 py-1 rounded">إطار عمل أمني</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/CPS-SEC" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-file-invoice text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">CPS-SEC: إطار تقييم نضوج الأنظمة الفيزيائية</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            تطوير إطار تقييم أمني متعدد الأبعاد لـ (CPS) يشتمل على 16 معياراً دقيقاً مع التحقق البرمجي والرياضي في سيناريوهات الامتثال المتعددة.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">16 مؤشر تقييم GRC</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/CPS-SEC" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> الكود</a>
+                            <button onclick="openModal('modal-cps-sec')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 (Engineering / ML Security AR) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="engineering">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-cyber-accent bg-cyber-accent/10 px-2 py-1 rounded">تعلم آلي للشبكات</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/CRPS-ES-ML-Methodology-to-Detect-DDoS-in-5G" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-gears text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">كشف هجمات DDoS في شرائح 5G هجيناً</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            بناء نموذج هجين يدمج مقياس CRPS والتنعيم الأسي مع خوارزميات التعلم الآلي لكشف هجمات حجب الخدمة في شبكات الـ 5G بدقة F1-score بلغت 0.94.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">6.1 مليون سجل مصنف</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/CRPS-ES-ML-Methodology-to-Detect-DDoS-in-5G" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> الكود</a>
+                            <button onclick="openModal('modal-5g-ml')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 (Architecture / Mobile AR) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">تطبيقات برمجية آمنة</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://github.com/hend07/SMCA" target="_blank" class="text-cyber-textMuted hover:text-white transition-colors text-sm"><i class="fa-brands fa-github"></i></a>
+                                <i class="fa-solid fa-mobile-screen-button text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">SMCA: نظام الإنذار الطبي والرموز الذكية</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            تطوير نموذج أولي لتطبيق Flutter آمن يتيح إرسال تنبيهات الطوارئ والرموز الطبية والربط الآمن والذكي مع خوارزميات Gemini AI في أقل من 30 ثانية.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">إرسال التنبيه &lt; 30 ثانية</span>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/hend07/SMCA" target="_blank" class="text-cyber-textMuted hover:text-white flex items-center gap-1 font-mono text-[10px]"><i class="fa-brands fa-github text-xs"></i> الكود</a>
+                            <button onclick="openModal('modal-smca')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 (Architecture / Cloud RFID Bus Arabic) -->
+                <div class="project-card bg-cyber-card border border-cyber-border rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 font-bold text-right" data-category="architecture">
+                    <div class="p-6 border-b border-cyber-border">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase tracking-wider text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">إنترنت الأشياء والسحاب</span>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-bus text-cyber-textMuted"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">نظام الـ RFID والسحاب الذكي لحماية وحضور الطلاب بالحافلات</h4>
+                        <p class="text-cyber-textMuted text-xs line-clamp-3">
+                            تصميم وتطوير نموذج إنترنت الأشياء (IoT) لجامعة الطائف باستخدام معالجات NodeMCU وأساور RFID وقاعدة بيانات MySQL لمراقبة صعود ونزول الطلاب تلقائياً وعرض الإحصائيات الفورية للسائق وأولياء الأمور.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 bg-cyber-bg/50 flex items-center justify-between text-xs">
+                        <span class="text-cyber-accent font-bold">حوسبة سحابية ورصد فوري</span>
+                        <div class="flex items-center gap-3">
+                            <button onclick="openModal('modal-bus')" class="text-cyber-primary hover:underline font-bold flex items-center gap-1">
+                                التفاصيل <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Arsenal Section (AR) -->
+        <section id="skills-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border text-right">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                المهارات التقنية 
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Defensive & Engineering Skills -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-cyber-accent/30 transition-all">
+                    <h4 class="text-lg font-bold text-cyber-accent mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-sm text-cyber-accent ml-2"></i> اللغات البرمجية
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs text-gray-300">لغة P4</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Python</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Dart (Flutter)</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Bash / Shell</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">SQL</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">HTML5 & CSS3</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">LaTeX</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-yellow-400/30 transition-all">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-toolbox text-sm text-yellow-400 ml-2"></i> الأدوات والتقنيات
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Suricata IDPS</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Snort</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">ntopng</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Metasploit</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Scapy</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Kali Linux</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Wireshark</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Docker</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Mininet</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">BMv2 Switch</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Adobe InDesign</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Adobe Illustrator</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">iSpring Suite</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Standards -->
+                <div class="bg-cyber-card border border-cyber-border p-8 rounded-xl relative group hover:border-purple-400/30 transition-all">
+                    <h4 class="text-lg font-bold text-purple-400 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-file-shield text-sm text-purple-400 ml-2"></i> الأطر والتشريعات والمعايير
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">NCA ECC</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">NIST CSF</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">ISO 27001</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs text-gray-300">تشريعات GDPR</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs text-gray-300">معايير HIPAA</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs text-gray-300">بروتوكول FHIR الطبي</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">OWASP IoT Top 10</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded-lg text-xs font-mono text-gray-300">Agile SecDevOps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Credentials Section (AR) -->
+        <section id="credentials-ar" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border bg-cyber-bg/10 text-right" dir="rtl">
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 flex items-center gap-3 justify-start">
+                <span class="w-1.5 h-8 bg-cyber-accent rounded-full"></span>
+                الشهادات المهنية الاحترافية المعتمدة
+            </h3>
+            
+            <div class="overflow-x-auto bg-cyber-card border border-cyber-border rounded-xl p-6">
+                <table class="w-full text-right border-collapse text-sm" dir="rtl">
+                    <thead>
+                        <tr class="border-b border-cyber-border text-cyber-accent font-mono text-xs uppercase tracking-wider">
+                            <th class="pb-4 pl-4">الشهادة المهنية</th>
+                            <th class="pb-4 px-4">الجهة المصدرة</th>
+                            <th class="pb-4 px-4">التاريخ</th>
+                            <th class="pb-4 pr-4 text-left">التحقق</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-cyber-border/40 text-gray-300">
+                        <tr class="hover:bg-cyber-bg/30 transition-colors">
+                            <td class="py-4 pl-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-cyber-accent ml-2"></i> Google Cybersecurity Professional Certificate V2
+                            </td>
+                            <td class="py-4 px-4">Coursera / Google</td>
+                            <td class="py-4 px-4 ">24 يناير 2024</td>
+                            <td class="py-4 pr-4 text-left">
+                                <a href="https://www.credly.com/go/90Yyo0Pk" target="_blank" class="px-3 py-1 bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent rounded text-xs hover:bg-cyber-accent hover:text-cyber-bg transition-all font-mono font-bold"><i class="fa-solid fa-arrow-up-right-from-square ml-1"></i> تحقق</a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-cyber-bg/30 transition-colors">
+                            <td class="py-4 pl-4 font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie text-cyber-accent ml-2"></i> Google Data Analytics Professional Certificate
+                            </td>
+                            <td class="py-4 px-4">Coursera / Google</td>
+                            <td class="py-4 px-4 ">1 نوفمبر 2023</td>
+                            <td class="py-4 pr-4 text-left">
+                                <a href="https://www.credly.com/go/8wocLUSd" target="_blank" class="px-3 py-1 bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent rounded text-xs hover:bg-cyber-accent hover:text-cyber-bg transition-all font-mono font-bold"><i class="fa-solid fa-arrow-up-right-from-square ml-1"></i> تحقق</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact-ar" class="bg-cyber-card/50 border-t border-cyber-border py-12 px-6 text-right">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-right">
+                    <h4 class="font-bold text-lg mb-1 text-cyber-accent">هند الغريبي</h4>
+                    <p class="text-xs text-cyber-textMuted">ملف الأعمال المهني لباحثة ومهندسة الأمن السيبراني</p>
+                </div>
+                <div class="flex items-center gap-4 text-xl">
+                    <a href="https://github.com/hend07" target="_blank" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hind-abed-al-ghuraybi-3716b4133" target="_blank" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:hendabed1@hotmail.com" class="w-10 h-10 rounded-lg bg-cyber-bg border border-cyber-border flex items-center justify-center hover:text-cyber-accent transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="text-xs text-cyber-textMuted">
+                    &copy; 2026 هند الغريبي. كافة الحقوق محفوظة.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ======================================================= -->
+    <!--            SHARED INTERACTIVE MODALS (ENGLISH)          -->
+    <!-- ======================================================= -->
+    
+    <!-- Modal: Suricata -->
+    <div id="modal-suricata" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-suricata')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-cyber-accent mb-4">Intrusion Prevention & Traffic Visualization (Suricata & ntopng)</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Technical Environment:</strong> Installed Suricata IDPS on a virtual Ubuntu 20.04 LTS instance. Used Kali Linux for traffic generation, executing attack scripts, and visualizing flow analytics in ntopng.</p>
+                <div class="bg-cyber-bg p-4 rounded-lg border border-cyber-border space-y-2">
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">SYN Flood DoS</span><span class="text-cyber-accent font-mono">Dropped 77,612 packets (45.28%)</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Alert Isolation</span><span class="text-cyber-accent font-mono">Immediate detection of "SYN RECV"</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Web Attacks (DVWA)</span><span class="text-cyber-accent font-mono">100% prevention via custom rules</span></div>
+                    <div class="flex justify-between pb-1.5"><span class="text-cyber-textMuted">ARP Poisoning (L2)</span><span class="text-cyber-accent font-mono">Detected via ntopng (8.7% of total traffic)</span></div>
+                </div>
+                <p><strong class="text-white">Implementation & Findings:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">DDoS Resilience:</strong> Simulated floods via hping3, monitored open queues using `netstat -nat`, verified line-rate drops, and leveraged multi-core capabilities of Ubuntu for high-throughput packet processing.</li>
+                    <li><strong class="text-white">Web Hardening:</strong> Handcrafted rules to inspect HTTP parameters against command and SQL injection attacks, achieving 100% block rates on target applications.</li>
+                    <li><strong class="text-white">ARP Auditing:</strong> Demonstrated the limitation of layer-3 engines in detecting layer-2 spoofs; successfully used ntopng to capture and alert on 902 responses and 2.9K ARP requests.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Exploit -->
+    <div id="modal-exploit" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-exploit')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-cyber-accent mb-4">Vulnerability Exploitation & Hands-On Network Scenarios</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Scenario & Infrastructure:</strong> Simulated targeted system compromise using Metasploit on Windows 7 and executed SEED Labs network manipulation scripts.</p>
+                <div class="bg-cyber-bg p-4 rounded-lg border border-cyber-border space-y-2">
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Exploitation Console</span><span class="text-cyber-accent font-mono">Metasploit Console (msfconsole)</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Payload Delivery</span><span class="text-cyber-accent font-mono">Meterpreter Reverse TCP Shell</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Active Port Listening</span><span class="text-cyber-accent font-mono">LPORT 4782</span></div>
+                    <div class="flex justify-between pb-1.5"><span class="text-cyber-textMuted">Network Manipulation</span><span class="text-cyber-accent font-mono">Python Scapy / Quasar RAT</span></div>
+                </div>
+                <p><strong class="text-white">Offensive Labs & Mitigations:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Active Reverse Shell:</strong> Constructed and encoded executable trojans to bypass standard signature detection, establishing a shell connection for remote desktop viewing and directory manipulation.</li>
+                    <li><strong class="text-white">Session Manipulation:</strong> Executed TCP session hijacking and injected administrative commands into active unencrypted Telnet sessions using Scapy.</li>
+                    <li><strong class="text-white">Denial of Service:</strong> Authored Scapy script to craft and inject high-frequency TCP RST packets to instantly terminate active peer connections (TCP Reset Attack).</li>
+                    <li><strong class="text-white">Defense Countermeasures:</strong> Enforced outbound port filtering, deployed network level access lists, and activated system patching pipelines to neutralize known vulnerabilities.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: RSA -->
+    <div id="modal-rsa" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-rsa')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-cyber-accent mb-4">Multi-Threaded TCP Cryptographic Chat System (RSA)</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Core Project Design:</strong> Built a reliable, highly parallel TCP Client-Server communication architecture from scratch using Python, supporting secure multiple simultaneous chat rooms.</p>
+                <p><strong class="text-white">Handcrafted Mathematical Cryptography:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li>Programmed the entire asymmetric RSA cryptographic logic manually, rejecting the import of any pre-made encryption libraries.</li>
+                    <li>Calculated Modular Multiplicative Inverse using the Extended Euclidean Algorithm to handle key derivation with strict mathematical precision.</li>
+                    <li>Wrote prime-generation functions and large modular exponentiation processes to secure messages from man-in-the-middle eavesdroppers (End-to-End Encryption).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: P4 -->
+    <div id="modal-p4" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-p4')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">P4DDLe: Intelligent line-rate DDoS Detection in SDN Data Planes</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Architectural Paradigm:</strong> Proposed an advanced, highly optimized SDN defense framework that relocates packet filtering directly into the programmable Data Plane (BMv2 Software Switch), reducing latency and control plane fatigue.</p>
+                <p><strong class="text-white">Advanced Data Plane Engineering with P4:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Counting Bloom Filters:</strong> Wrote P4 code implementing dynamic Counting Bloom Filters across 4 distinct hash registers powered by CRC32 algorithms (tracking 4-tuple and 5-tuple flow IDs in real-time).</li>
+                    <li><strong class="text-white">Race Condition Mitigation:</strong> Solved concurrent write-read conflicts between the fast data plane and deep learning controller by dividing state memory into Dual-Block Registers (Block 0 & 1), dynamically coordinated via SWITCHREG and POSITIONREG flags.</li>
+                    <li><strong class="text-white">Live Prediction:</strong> Deployed a multi-class LUCID CNN model within the control plane, monitoring live network flows across parallel terminal configurations (switch compile, CNN live prediction, and packet replay using CIC-DDoS2019 data).</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="https://github.com/hend07/p4ddle" target="_blank" class="w-full h-12 bg-cyber-accent text-cyber-bg font-extrabold rounded-lg flex items-center justify-center gap-2 hover:bg-cyber-accentHover transition-colors shadow-lg shadow-cyber-accent/10">
+                        <i class="fa-brands fa-github text-lg"></i> View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: AMCB -->
+    <div id="modal-amcb" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-amcb')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">AMCB: Authenticated Medical Cyber-Physical Blockchain Model</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Publication Venue:</strong> Published as a novel, four-layer hardware-anchored security framework in the peer-reviewed Q2 journal: <strong class="text-white">Multimedia Tools and Applications (2024)</strong>.</p>
+                <p><strong class="text-white">Core Multi-Layered Security Architecture:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Physical Layer:</strong> Designed a hardware-based authentication model leveraging SRAM PUF challenge-response pairs to derive stable cryptographic keys (achieving a robust 6.60% standard deviation in Hamming Distance, proving physical unclonability).</li>
+                    <li><strong class="text-white">Inspection Layer:</strong> Automated physical anomaly detection directly in Fog nodes using a Random Forest classification model, demonstrating <strong class="text-white">99.21% accuracy</strong> in detecting rogue data injection.</li>
+                    <li><strong class="text-white">Application Layer:</strong> Implemented smart contracts to manage doctor access logs and verify data integrity on an immutable blockchain ledger (boasting a transaction speed of 36.15ms).</li>
+                </ul>
+                <div class="p-3 bg-cyber-bg border border-cyber-border text-center text-cyber-accent rounded-lg font-mono text-xs">
+                    Total system-wide verification execution time measured at an outstanding 49.82ms!
+                </div>
+                <div class="pt-4">
+                    <a href="https://github.com/hend07/AMCB-Authenticated-Medical-Cyber-Physical-Blockchain-model" target="_blank" class="w-full h-12 bg-cyber-accent text-cyber-bg font-extrabold rounded-lg flex items-center justify-center gap-2 hover:bg-cyber-accentHover transition-colors shadow-lg shadow-cyber-accent/10">
+                        <i class="fa-brands fa-github text-lg"></i> View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: EHR GRC -->
+    <div id="modal-grc-ehr" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-grc-ehr')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-purple-400 mb-4">Systematic GRC &amp; Feasibility Evaluation of EHR Blockchain Models</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Research Focus:</strong> Conducted a rigorous systematic evaluation of 10 modern decentralized medical architectures to map transactional security, operational viability, and system integration boundaries.</p>
+                <p><strong class="text-white">Feasibility, GRC &amp; Operational Insights:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Real-Time Peak-Demand Gap:</strong> Identified that most proposed blockchain models remain theoretical and lack real-world, real-time testing. Overlapping transactional interactions during peak times are highly untested, posing significant performance and stability questions.</li>
+                    <li><strong class="text-white">Financial Viability (Gas Fees):</strong> Audited transaction costs, noting that blockchain is not cheap. Operating transactions require health sectors to pay "gas" fees, raising the question of economic viability across all healthcare sectors.</li>
+                    <li><strong class="text-white">Legacy Compatibility &amp; AI Integration:</strong> Analyzed integration challenges with existing legacy clinical systems. Highlighted that incorporating blockchain with other emerging technologies (like AI or cloud computing) introduces unknown compatibility and implementation costs.</li>
+                    <li><strong class="text-white">Pathways to Adoption:</strong> Recommended overcoming barriers by optimizing consensus algorithms, developing flexible and scalable operating models, establishing unified data standards, and integrating with AI and cloud computing.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: IP Cam -->
+    <div id="modal-ip-cam" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-ip-cam')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg text-white"></i></button>
+            <h4 class="text-xl font-bold text-purple-400 mb-4">Systematic Security Review & Risk Assessment of IP Security Cameras</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Analytical Methodology:</strong> Conducted a rigorous systematic literature review and vulnerability mapping of smart IP security cameras against the OWASP IoT Top 10, evaluating common flaws like unencrypted local network traffic, insecure manufacturing credentials, and passive firmware updating pipelines.</p>
+                <p><strong class="text-white">Evaluated GRC Mitigation Controls:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Decentralized Identity:</strong> Evaluated proposed architectures integrating blockchain smart contracts to manage device registration, mitigating physical sniffing and camera control hijacking.</li>
+                    <li><strong class="text-white">Defensive Hardening:</strong> Audited strict compliance recommendations including end-to-end media encryption, scheduled automated firmware signed patching, and port-filtering rules to block botnet recruitment.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Agile -->
+    <div id="modal-agile" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-agile')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-purple-400 mb-4">AI-Driven Agile Risk &amp; Defect Governance (Systematic Review)</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Academic Framework:</strong> Performed a comprehensive systematic review analyzing the application of advanced artificial intelligence models (such as Fuzzy Logic, Artificial Neural Networks, and Bayesian Networks) to predict software defects and manage risks within Agile environments.</p>
+                <p><strong class="text-white">Strategic &amp; Analytical Insights:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Fuzzy Logic Evaluation:</strong> Evaluated the integration of tools like the Fuzzy Logic Toolbox to predict software defects at key stages (Analysis, Design, Coding, Testing) based on metric boundaries.</li>
+                    <li><strong class="text-white">Predictive ANN Analysis:</strong> Assessed the performance of neural networks in predicting project success rates and spotting high-risk modules early in Agile sprints.</li>
+                    <li><strong class="text-white">Resource Optimization:</strong> Highlighted how early AI-driven defect forecasting enables technical leads to optimize manual code audits, thereby lowering overall DevSecOps costs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Content Gov -->
+    
+
+    <!-- Modal: CPS-SEC -->
+    <div id="modal-cps-sec" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-cps-sec')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-purple-400 mb-4">CPS-SEC: Security Maturity Assessment Framework</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Framework Concept:</strong> Designed a multi-dimensional security maturity model for Cyber-Physical Systems (CPS). The system maps 16 core security requirements across 4 operational dimensions.</p>
+                <p><strong class="text-white">Strategic & Technical Features:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Sensitivity Analysis:</strong> Programmed mathematical sensitivity checking in Python to stress-test weights across 5 dynamic scenarios, validating mathematical consistency.</li>
+                    <li><strong class="text-white">Comprehensive Mapping:</strong> Enables security leaders to benchmark architectures against threat surfaces and verify compliance in heterogeneous physical environments.</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="https://github.com/hend07/CPS-SEC" target="_blank" class="w-full h-12 bg-cyber-accent text-cyber-bg font-extrabold rounded-lg flex items-center justify-center gap-2 hover:bg-cyber-accentHover transition-colors shadow-lg shadow-cyber-accent/10">
+                        <i class="fa-brands fa-github text-lg"></i> View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: 5G ML -->
+    <div id="modal-5g-ml" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-5g-ml')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-cyber-accent mb-4">CRPS-ES-ML Anomaly Detection in 5G Slices</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Anomaly Detection Methodology:</strong> Engineered a robust network slice defense framework to isolate volumetric DDoS flooding and security anomalies on 5G slices.</p>
+                <p><strong class="text-white">Technical Implementation & Benchmarks:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Statistical Fusion:</strong> Combined Continuous Ranked Probability Score (CRPS) with Exponential Smoothing (ES) to establish robust baseline prediction limits.</li>
+                    <li><strong class="text-white">ML Pipelines:</strong> Trained classification algorithms (Decision Tree, Random Forest, AdaBoost) over a colossal dataset of 6.1M records, yielding an impressive F1-score of 0.94.</li>
+                    <li><strong class="text-white">ANOVA Validation:</strong> Ran analysis of variance (ANOVA) and statistical validation to substantiate model stability.</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="https://github.com/hend07/CRPS-ES-ML-Methodology-to-Detect-DDoS-in-5G" target="_blank" class="w-full h-12 bg-cyber-accent text-cyber-bg font-extrabold rounded-lg flex items-center justify-center gap-2 hover:bg-cyber-accentHover transition-colors shadow-lg shadow-cyber-accent/10">
+                        <i class="fa-brands fa-github text-lg"></i> View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: SMCA -->
+    <div id="modal-smca" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-smca')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">SMCA: Smart Medical Code Alert System</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Concept & Architecture:</strong> Developed a highly responsive prototype designed to broadcast emergency medical codes (e.g., Code Blue, Code Red) securely and rapidly within hospital environments.</p>
+                <p><strong class="text-white">Technical Components:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Cross-Platform Dev:</strong> Programmed a beautiful, highly fluid user interface using Flutter for immediate deployment.</li>
+                    <li><strong class="text-white">AI Co-Processing:</strong> Securely integrated the Gemini API to analyze emergency contexts and auto-generate precise, structured administrative and dispatch notifications in under 30 seconds.</li>
+                </ul>
+                <div class="pt-6">
+                    <a href="https://github.com/hend07/SMCA" target="_blank" class="w-full h-12 bg-cyber-accent text-cyber-bg font-extrabold rounded-lg flex items-center justify-center gap-2 hover:bg-cyber-accentHover transition-colors shadow-lg shadow-cyber-accent/10">
+                        <i class="fa-brands fa-github text-lg"></i> View Repository on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal: Bus -->
+    <div id="modal-bus" class="fixed inset-0 bg-cyber-bg/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-cyber-card border border-cyber-border rounded-xl max-w-2xl w-full p-6 relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-bus')" class="absolute top-4 right-4 text-cyber-textMuted hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">Cloud-Enabled School Bus RFID Safety &amp; Attendance Monitoring System</h4>
+            <div class="space-y-4 text-sm leading-relaxed">
+                <p><strong class="text-white">Academic Context:</strong> Developed as an applied hardware-software Bachelor's graduation project at Taif University, bridging Embedded Engineering, RFID technology, and Cloud Databases.</p>
+                <div class="bg-cyber-bg p-4 rounded-lg border border-cyber-border space-y-2">
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Microcontroller Board</span><span class="text-cyber-accent font-mono">NodeMCU (ESP8266 WiFi Enabled)</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Scanning Hardware</span><span class="text-cyber-accent font-mono">MFRC522 RFID Reader &amp; Student Wristbands</span></div>
+                    <div class="flex justify-between border-b border-cyber-border/30 pb-1.5"><span class="text-cyber-textMuted">Database Integration</span><span class="text-cyber-accent font-mono">Centralized MySQL Database (via Wamp Server)</span></div>
+                    <div class="flex justify-between pb-1.5"><span class="text-cyber-textMuted">Programming IDE</span><span class="text-cyber-accent font-mono">Arduino IDE &amp; C++ Microcode</span></div>
+                </div>
+                <p><strong class="text-white">System Architecture &amp; Execution:</strong></p>
+                <ul class="list-disc pl-5 space-y-2 text-cyber-textMuted">
+                    <li><strong class="text-white">Smart Access Control:</strong> Each student wears a customized RFID wristband. An RFID reader installed at the school bus door scans students as they enter or exit, logging movement in real-time.</li>
+                    <li><strong class="text-white">Headcount &amp; Safety Dashboard:</strong> Displays the live passenger count on an LCD dashboard screen inside the bus. Coupled with active buzzer notifications, it alerts the driver of active passengers to eliminate the risk of children being abandoned or forgotten inside.</li>
+                    <li><strong class="text-white">Automated Cloud Sync:</strong> NodeMCU utilizes its built-in WiFi to transmit transaction data (Student Name, Student ID, wristband Serial Number, timestamp, and National ID) wirelessly to the school's MySQL database.</li>
+                    <li><strong class="text-white">Web Portal:</strong> School administrators and parents can log into a secure web portal (developed using PHP/MySQL) to inspect real-time logs, tracking exact boarding and deboarding histories.</li>
+                </ul>
+                <p><strong class="text-white">Strategic &amp; Practical Value:</strong> Delivers a 100% reduction in vehicle abandonment risks, ensuring compliance with student transport safety frameworks. The modular and cost-effective design is highly scalable and readily transferrable for industrial transport, assembly auditing, or Hajj &amp; Umrah pilgrim transit tracking.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Filter, Modal & Language Toggler Script -->
+    <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            const enSection = document.getElementById('portfolio-en');
+            const arSection = document.getElementById('portfolio-ar');
+            const toggleWrapper = document.getElementById('lang-toggle-wrapper');
+
+            if (currentLang === 'en') {
+                currentLang = 'ar';
+                enSection.classList.add('hidden');
+                arSection.classList.remove('hidden');
+                toggleWrapper.classList.remove('right-4');
+                toggleWrapper.classList.add('left-4');
+                document.title = "هند الغريبي | ملف الأعمال للامن السيبراني";
+            } else {
+                currentLang = 'en';
+                arSection.classList.add('hidden');
+                enSection.classList.remove('hidden');
+                toggleWrapper.classList.remove('left-4');
+                toggleWrapper.classList.add('right-4');
+                document.title = "Hind Al-Ghuraybi | Cybersecurity Portfolio";
+            }
+        }
+
+        function filterProjects(category) {
+            const gridSelector = currentLang === 'en' ? '#projects-grid' : '#projects-grid-ar';
+            const cards = document.querySelectorAll(`${gridSelector} .project-card`);
+            
+            const btnPrefix = currentLang === 'en' ? 'btn-' : 'btn-';
+            const btnSuffix = currentLang === 'en' ? '' : '-ar';
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Reset buttons
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-4 py-2 rounded-lg bg-cyber-card border border-cyber-border hover:border-cyber-accent transition-all text-gray-300";
+            });
+            
+            // Set active button
+            const activeBtn = document.getElementById(btnPrefix + category + btnSuffix);
+            if (activeBtn) {
+                if (category === 'all') {
+                    activeBtn.className = "filter-btn px-4 py-2 rounded-lg bg-cyber-accent text-cyber-bg font-bold transition-all";
+                } else {
+                    activeBtn.className = "filter-btn px-4 py-2 rounded-lg bg-cyber-accent text-cyber-bg font-bold transition-all text-cyber-bg";
+                }
+            }
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop scrolling background
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scroll
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('[id^="modal-"]');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
